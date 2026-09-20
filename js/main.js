@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const MAX_DIST = 120;
 
     function resize() {
-      w = canvas.width = canvas.offsetWidth;
-      h = canvas.height = canvas.offsetHeight;
+      w = canvas.width = window.innerWidth;
+      h = canvas.height = document.getElementById('hero').offsetHeight || window.innerHeight;
     }
     resize();
     window.addEventListener('resize', resize);
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'Full-Stack Developer.',
     'ROS2 & Digital Twin Developer.',
     'Generative AI Builder.',
-    'Shipping to 382+ users.',
+    'Shipping to 1K+ users.',
     'Deep RL Researcher.',
   ];
   const tw = document.getElementById('typewriter');
