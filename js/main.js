@@ -55,12 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
     resize();
     window.addEventListener('resize', resize);
 
-    canvas.addEventListener('mousemove', e => {
+    const heroSec = document.getElementById('hero');
+    heroSec.addEventListener('mousemove', e => {
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
     });
-    canvas.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
+    heroSec.addEventListener('mouseleave', () => { mouse.x = null; mouse.y = null; });
 
     class Particle {
       constructor() {
