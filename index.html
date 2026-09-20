@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Suraj Surve | AI &amp; Robotics Architect</title>
-  <meta name="description" content="GATE DA Qualified AI & Robotics Engineer. Architecting intelligent systems — from 6-DOF robotic arms to RAG-powered LLM pipelines and production mobile apps.">
+  <title>Suraj Surve | AI & Robotics Architect</title>
+  <meta name="description" content="GATE DA Qualified AI & Robotics Engineer. Building intelligent systems — from MANAS humanoid robots to RAG-powered LLM pipelines, production mobile apps, and cloud robotics platforms. 32+ projects, 382+ live users.">
+  <meta name="keywords" content="Suraj Surve, AI Engineer, Robotics Engineer, Machine Learning, ROS2, Digital Twin, MANAS Humanoid, Flutter Developer, RAG, LLM, GATE DA, MMCOE Pune, Deep Reinforcement Learning, YOLO, Gemini API">
   <meta property="og:title" content="Suraj Surve | AI & Robotics Architect">
-  <meta property="og:description" content="Architecting Intelligent Systems. From natural language to physical kinematics.">
+  <meta property="og:description" content="GATE DA Qualified — Architecting Intelligent Systems. From natural language to physical kinematics. 32+ production systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://surajsurve4511.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Suraj Surve | AI & Robotics Architect">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- ═══ BOOT SEQUENCE OVERLAY ═══ -->
+<div class="boot-overlay" id="bootOverlay">
+  <div class="boot-terminal">
+    <div class="boot-lines" id="bootLines"></div>
+    <div class="boot-cursor">_</div>
+  </div>
+</div>
+
+<!-- ═══ SCROLL PROGRESS BAR ═══ -->
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ═══ CUSTOM CURSOR ═══ -->
+<div class="custom-cursor" id="cursor"></div>
+<div class="custom-cursor-dot" id="cursorDot"></div>
+
+<!-- ═══ CRT SCANLINE OVERLAY ═══ -->
 <div class="scanline"></div>
 
 <!-- ═══ NAVIGATION ═══ -->
@@ -18,19 +42,25 @@
   <div class="nav-inner">
     <a href="#" class="nav-logo">S<span>.</span>SURVE</a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#systems" class="active">SYSTEMS.BUILT</a></li>
-      <li><a href="#engine">THE.ENGINE</a></li>
-      <li><a href="#transmission">TRANSMISSION</a></li>
+      <li><a href="#systems" class="active">SYSTEMS</a></li>
+      <li><a href="#engine">ENGINE</a></li>
+      <li><a href="#deployments">LOG</a></li>
+      <li><a href="#credentials">CREDS</a></li>
+      <li><a href="#transmission">LINK</a></li>
     </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <svg class="theme-icon sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+      <svg class="theme-icon moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
     <button class="nav-mobile" id="navToggle" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- ═══ HERO — THE HALO EFFECT ═══ -->
+<!-- ═══ HERO — COMMAND CENTER ═══ -->
 <section class="hero" id="hero">
-  <div class="hero-grid"></div>
+  <canvas class="particle-canvas" id="particleCanvas"></canvas>
   <div class="hero-gradient"></div>
   <div class="hero-gradient-2"></div>
   <div class="container hero-content">
@@ -40,12 +70,12 @@
           <span></span> GATE DA QUALIFIED — AI &amp; DATA SCIENCE
         </div>
         <p class="hero-hook">Architecting Intelligent Systems.</p>
-        <h1 class="hero-name">Suraj Surve<span class="glow-text">.</span></h1>
+        <h1 class="hero-name"><span class="glitch" data-text="Suraj Surve">Suraj Surve</span><span class="glow-text">.</span></h1>
         <div class="hero-typewriter" id="typewriter"><span class="cursor"></span></div>
-        <p class="hero-desc">From a 6-DOF robotic arm with a natural language Brain Node and live Digital Twin, to RAG-powered voice assistants, production Flutter apps serving 382+ real users, and enterprise SaaS platforms — I engineer full-stack intelligent systems end to end.</p>
+        <p class="hero-desc">From a full-body <strong>MANAS humanoid robot</strong> with ROS2 + Isaac Sim digital twin, to a 6-DOF robotic arm with a natural language Brain Node, production Flutter apps serving <strong>382+ real users</strong>, and enterprise SaaS platforms — I engineer full-stack intelligent systems end to end.</p>
         <div class="hero-stats">
           <div class="hero-stat"><div class="hero-stat-value" data-count="382">0</div><div class="hero-stat-label">Live Users</div></div>
-          <div class="hero-stat"><div class="hero-stat-value" data-count="5">0</div><div class="hero-stat-label">Production Systems</div></div>
+          <div class="hero-stat"><div class="hero-stat-value" data-count="32">0</div><div class="hero-stat-label">Projects Built</div></div>
           <div class="hero-stat"><div class="hero-stat-value" data-count="3">0</div><div class="hero-stat-label">Active Internships</div></div>
           <div class="hero-stat"><div class="hero-stat-value" data-count="21">0</div><div class="hero-stat-label">Certifications</div></div>
         </div>
@@ -56,19 +86,19 @@
       </div>
       <div class="hero-photo-wrap">
         <div class="hero-photo-ring"></div>
-        <img src="assets/profile.jpeg" alt="Suraj Surve" class="hero-photo">
+        <img src="assets/profile.jpeg" alt="Suraj Surve" class="hero-photo" loading="eager">
       </div>
     </div>
   </div>
   <div class="hero-scroll"><span>SCROLL</span><div class="hero-scroll-line"></div></div>
 </section>
 
-<!-- ═══ SYSTEMS BUILT — ZEIGARNIK CASE STUDIES ═══ -->
+<!-- ═══ SYSTEMS BUILT — TIER 1 CASE STUDIES ═══ -->
 <section class="section" id="systems">
   <div class="container">
     <div class="reveal"><span class="section-label">Systems Built</span></div>
     <h2 class="section-title reveal">Production systems, not classroom experiments<span class="glow-text">.</span></h2>
-    <p class="section-sub reveal">Each project is deployed, quantified, and engineering-first. Click into the architectural bottlenecks.</p>
+    <p class="section-sub reveal">Each project is deployed, quantified, and engineering-first. 32+ systems across robotics, AI, and full-stack.</p>
 
     <div class="project-filters reveal">
       <button class="filter-btn active" data-filter="all">All</button>
@@ -78,12 +108,59 @@
       <button class="filter-btn" data-filter="genai">Generative AI</button>
       <button class="filter-btn" data-filter="mobile">Mobile</button>
       <button class="filter-btn" data-filter="rl">Reinforcement Learning</button>
+      <button class="filter-btn" data-filter="saas">SaaS</button>
     </div>
 
     <div class="projects-grid">
 
-      <!-- ── CASE STUDY 1: Robotic Arm ── -->
-      <article class="case-study reveal" data-tags="robotics ai genai">
+      <!-- ── CASE STUDY 1: MANAS Humanoid ── -->
+      <article class="case-study holo-card reveal" data-tags="robotics ai genai">
+        <div class="holo-border"></div>
+        <div class="case-study-header">
+          <h3 class="case-study-title">MANAS Humanoid — Full-Body Robot with LLM Cognition &amp; Digital Twin</h3>
+          <span class="case-study-status status-live">● ACTIVE</span>
+        </div>
+        <div class="case-study-tags">
+          <span class="case-study-tag">Robotics</span><span class="case-study-tag">AI/ML</span>
+          <span class="case-study-tag">Generative AI</span><span class="case-study-tag">Hardware</span><span class="case-study-tag">Digital Twin</span>
+        </div>
+        <p class="case-study-hook">Building classroom robots is standard. Building a <strong>full-body humanoid</strong> that processes Indic speech → reasons through a <strong>Qwen 4B LLM</strong> → executes autonomous tasks while maintaining a <strong>bidirectional Isaac Sim digital twin</strong> across 70 links is an architectural nightmare. Here is how MANAS was born.</p>
+
+        <div class="bottleneck">
+          <div class="bottleneck-label radar-pulse">⚠ Bottleneck 01 — Human-Robot Interaction at Scale</div>
+          <h4 class="bottleneck-title">Humanoid robots need to understand natural language in Indian regional languages.</h4>
+          <p class="bottleneck-problem"><strong>The Problem:</strong> Standard speech-to-text fails with Indian accents and regional dialects. The robot needs to understand intent, reason, and respond naturally.</p>
+          <p class="bottleneck-solution"><strong>The Engine:</strong> Full HRI pipeline: Indic STT → Qwen 4B LLM (running locally via GGUF) for intent extraction and reasoning → Natural TTS response. The robot autonomously plans and executes tasks in showroom and university environments.</p>
+        </div>
+
+        <div class="bottleneck">
+          <div class="bottleneck-label radar-pulse">⚠ Bottleneck 02 — 70-Link Kinematic Synchronization</div>
+          <h4 class="bottleneck-title">Simulating 70 links in real-time across ROS2 and Unity is computationally explosive.</h4>
+          <p class="bottleneck-problem"><strong>The Problem:</strong> The MANAS upper body has 70 links, 69 joints (54 moving), requiring bidirectional state sync between the physical robot, ROS2, and the Unity 6 visualization studio.</p>
+          <p class="bottleneck-solution"><strong>The Engine:</strong> High-throughput 60+ Hz UDP telemetry schema v2.0 bridging ROS2 ↔ Unity 6. TwinPhi studio with 26 independent drive sliders, 28 mimic joints, and 16 preset conversational gestures.</p>
+        </div>
+
+        <div class="bottleneck">
+          <div class="bottleneck-label radar-pulse">⚠ Bottleneck 03 — Multi-Camera Motion Capture</div>
+          <h4 class="bottleneck-title">Optical tracking collapses when the arm is fully extended (collinear singularity).</h4>
+          <p class="bottleneck-problem"><strong>The Problem:</strong> SVD DLT triangulation across calibrated camera arrays breaks when shoulder-elbow-wrist become collinear — exactly the pose most needed for pointing gestures.</p>
+          <p class="bottleneck-solution"><strong>The Engine:</strong> Decoupled optical-inertial swing-twist filter: optical rays determine arm pointing vector, BNO085 IMU quaternions resolve axial roll/twist. Separate concerns, eliminate singularity.</p>
+        </div>
+
+        <div class="tech-block">
+          <div class="tech-block-title">// execution stack</div>
+          <div class="tech-line"><span>Hardware:</span>  Full-body humanoid frame · BNO085/MPU-6050 IMUs · Multi-camera array</div>
+          <div class="tech-line"><span>Software:</span>  ROS2 Humble · NVIDIA Isaac Sim · MoveIt 2 · Qwen 4B LLM (GGUF)</div>
+          <div class="tech-line"><span>Studio:</span>    Unity 6 (TwinPhi) · 70-link rig · 16 conversational gestures · 30Hz recorder</div>
+          <div class="tech-line"><span>Vision:</span>    MediaPipe · OpenCV · SVD DLT 3D triangulation · DBSCAN point clouds</div>
+          <div class="tech-line"><span>Network:</span>   60+ Hz UDP telemetry · Python-C# bridge</div>
+          <div class="tech-line source-private" style="margin-top:.8rem;"><span>Source:</span>  🔒 Proprietary — M CAD Solutions · <a href="mailto:surajsurve02022@gmail.com" style="color:var(--cyan);opacity:.7;">Request demo access</a></div>
+        </div>
+      </article>
+
+      <!-- ── CASE STUDY 2: 6-DOF Robotic Arm ── -->
+      <article class="case-study holo-card reveal" data-tags="robotics ai genai">
+        <div class="holo-border"></div>
         <div class="case-study-header">
           <h3 class="case-study-title">6-DOF AI Robotic Arm — Bridging LLM Intent with Physical Kinematics</h3>
           <span class="case-study-status status-live">● ACTIVE</span>
@@ -92,27 +169,20 @@
           <span class="case-study-tag">Robotics</span><span class="case-study-tag">AI/ML</span>
           <span class="case-study-tag">Generative AI</span><span class="case-study-tag">Hardware</span>
         </div>
-        <p class="case-study-hook">Building a robotic arm is standard. Building an arm that translates plain English — <strong>"pick the red cube"</strong> — into sub-centimeter, collision-free physical movement while maintaining a real-time Digital Twin is an architectural nightmare. Here is how I built the bridge between <strong>natural language hallucination</strong> and <strong>precise physical kinematics</strong>.</p>
+        <p class="case-study-hook">"Pick the red cube" — translating plain English into <strong>sub-centimeter, collision-free physical movement</strong> while maintaining a real-time Digital Twin is the bridge between <strong>natural language hallucination</strong> and <strong>precise physical kinematics</strong>.</p>
 
         <div class="bottleneck">
-          <div class="bottleneck-label">⚠ Bottleneck 01 — The Translation Gap</div>
+          <div class="bottleneck-label radar-pulse">⚠ Bottleneck 01 — The Translation Gap</div>
           <h4 class="bottleneck-title">LLMs generate text. Servo motors require joint angles.</h4>
-          <p class="bottleneck-problem"><strong>The Problem:</strong> There is no native path from a language model's probabilistic output to the deterministic joint-angle commands a 6-DOF arm requires.</p>
-          <p class="bottleneck-solution"><strong>The Engine:</strong> I engineered a "Brain Node" — an Ollama local LLM extracts spatial intent and object description → YOLO World vision pipeline locates the object in the live camera feed → 3D coordinates are computed → ROS2 MoveIt calculates inverse kinematics and a collision-free trajectory → physical execution.</p>
+          <p class="bottleneck-problem"><strong>The Problem:</strong> No native path from a language model's probabilistic output to deterministic joint-angle commands.</p>
+          <p class="bottleneck-solution"><strong>The Engine:</strong> "Brain Node" — Ollama LLM extracts intent → YOLO World detects object in live feed → 3D coordinates computed → MoveIt calculates inverse kinematics + collision-free trajectory → physical execution.</p>
         </div>
 
         <div class="bottleneck">
-          <div class="bottleneck-label">⚠ Bottleneck 02 — Single-Camera Depth Failure</div>
-          <h4 class="bottleneck-title">One camera cannot map 3D space for sub-centimeter accuracy.</h4>
-          <p class="bottleneck-problem"><strong>The Problem:</strong> A monocular camera provides 2D projections. Sub-centimeter pick-and-place accuracy requires true 3D spatial understanding.</p>
-          <p class="bottleneck-solution"><strong>The Engine:</strong> Dual-camera spatial mapping (base-mounted + tabletop). Fixed reference mat calibration with YOLO World auto-recognizing reference points — fusing both feeds for absolute 3D object coordinates without manual annotation.</p>
-        </div>
-
-        <div class="bottleneck">
-          <div class="bottleneck-label">⚠ Bottleneck 03 — Sim-to-Real Synchronization</div>
-          <h4 class="bottleneck-title">Untested AI code destroys servo motors.</h4>
-          <p class="bottleneck-problem"><strong>The Problem:</strong> Testing experimental motion planning algorithms on physical hardware risks burning out ₹8,000+ servo motors.</p>
-          <p class="bottleneck-solution"><strong>The Engine:</strong> Bidirectional Digital Twin using Gazebo. Every physical movement mirrors in simulation. Every untested algorithm is validated in the Twin before being pushed to the ESP32/Arduino controllers.</p>
+          <div class="bottleneck-label radar-pulse">⚠ Bottleneck 02 — Sim-to-Real Synchronization</div>
+          <h4 class="bottleneck-title">Untested AI code destroys ₹8,000+ servo motors.</h4>
+          <p class="bottleneck-problem"><strong>The Problem:</strong> Testing experimental algorithms on physical hardware risks burning out expensive servos.</p>
+          <p class="bottleneck-solution"><strong>The Engine:</strong> Bidirectional Digital Twin using Gazebo. Every physical movement mirrors in simulation. Every algorithm validated in Twin before deployment to ESP32/Arduino controllers.</p>
         </div>
 
         <div class="tech-block">
@@ -120,13 +190,14 @@
           <div class="tech-line"><span>Hardware:</span>  3D-printed 6-DOF arm · Bus servo motors · Raspberry Pi · ESP32 · Dual cameras</div>
           <div class="tech-line"><span>Software:</span>  ROS2 · MoveIt · Gazebo · YOLO (Nano/Standard/World) · Ollama LLM</div>
           <div class="tech-line"><span>Cloud:</span>     AWS IoT Core (multi-robot telemetry streaming)</div>
-          <div class="tech-line"><span>Interface:</span> Flutter mobile app · Kinesthetic teach-by-demonstration</div>
-          <div class="tech-line source-private" style="margin-top:.8rem;"><span>Source:</span>  🔒 Proprietary — M CAD Solutions · <a href="mailto:surajsurve02022@gmail.com" style="color:var(--cyan);opacity:.7;">Request access for demo</a></div>
+          <div class="tech-line"><span>Interface:</span> Flutter mobile app · Kinesthetic teach-by-demonstration · PX4 controller</div>
+          <div class="tech-line source-private" style="margin-top:.8rem;"><span>Source:</span>  🔒 Proprietary — M CAD Solutions · <a href="mailto:surajsurve02022@gmail.com" style="color:var(--cyan);opacity:.7;">Request demo</a></div>
         </div>
       </article>
 
-      <!-- ── CASE STUDY 2: GrowBox ── -->
-      <article class="case-study reveal" data-tags="mobile fullstack genai ai">
+      <!-- ── CASE STUDY 3: GrowBox ── -->
+      <article class="case-study holo-card reveal" data-tags="mobile fullstack genai ai">
+        <div class="holo-border"></div>
         <div class="case-study-header">
           <h3 class="case-study-title">GrowBox — Shipping AI to 382 Real Users on the Play Store</h3>
           <span class="case-study-status status-live">● LIVE</span>
@@ -138,40 +209,32 @@
         <p class="case-study-hook">A solo-built, cross-platform smart gardening companion with <strong>AI plant disease diagnosis</strong>, gamification, payments, and a full admin dashboard. Not a tutorial project — a <strong>production system serving real users</strong>, with real money flowing through it.</p>
 
         <div class="metrics-row">
-          <div class="metric"><div class="metric-val">382</div><div class="metric-label">Users</div></div>
-          <div class="metric"><div class="metric-val">429</div><div class="metric-label">AI Diagnoses</div></div>
-          <div class="metric"><div class="metric-val">17.9K</div><div class="metric-label">Lines of Code</div></div>
-          <div class="metric"><div class="metric-val">15</div><div class="metric-label">DB Tables</div></div>
-          <div class="metric"><div class="metric-val">13</div><div class="metric-label">Admin Modules</div></div>
+          <div class="metric"><div class="metric-val" data-count="382">0</div><div class="metric-label">Users</div></div>
+          <div class="metric"><div class="metric-val" data-count="429">0</div><div class="metric-label">AI Diagnoses</div></div>
+          <div class="metric"><div class="metric-val" data-count="216">0</div><div class="metric-label">Active Gardens</div></div>
+          <div class="metric"><div class="metric-val" data-count="15">0</div><div class="metric-label">DB Tables</div></div>
+          <div class="metric"><div class="metric-val" data-count="13">0</div><div class="metric-label">Admin Modules</div></div>
         </div>
 
         <div class="bottleneck">
-          <div class="bottleneck-label">⚠ Bottleneck 01 — Apple Guideline 5.1.1 Account Deletion</div>
-          <h4 class="bottleneck-title">Apple demands full account deletion. Your data spans 10+ tables.</h4>
-          <p class="bottleneck-problem"><strong>The Problem:</strong> App Store compliance requires complete user data erasure — but user data is scattered across profiles, gardens, care logs, diagnoses, streaks, badges, credits, reminders, and subscriptions.</p>
-          <p class="bottleneck-solution"><strong>The Engine:</strong> 13-step cascading deletion flow cleaning all data across 10+ tables, culminating in a PL/pgSQL security-definer RPC that removes the user from Supabase <code>auth.users</code>. Explicit cache clearing prevents premium status from bleeding between accounts.</p>
-        </div>
-
-        <div class="bottleneck">
-          <div class="bottleneck-label">⚠ Bottleneck 02 — API Key Security in Mobile APKs</div>
-          <h4 class="bottleneck-title">Every APK can be decompiled. Your API keys are exposed.</h4>
-          <p class="bottleneck-problem"><strong>The Problem:</strong> Bundling API keys in mobile builds is a security vulnerability — anyone can extract them from the APK.</p>
-          <p class="bottleneck-solution"><strong>The Engine:</strong> All sensitive keys stored in a Supabase <code>app_config</code> table, fetched at runtime behind RLS policies. Zero secrets in the build artifact. Runtime key rotation without app updates.</p>
+          <div class="bottleneck-label radar-pulse">⚠ Bottleneck — Apple Guideline 5.1.1 + API Key Security</div>
+          <h4 class="bottleneck-title">Full account deletion across 10+ tables. Zero secrets in APK.</h4>
+          <p class="bottleneck-solution"><strong>The Engine:</strong> 13-step cascading deletion with PL/pgSQL security-definer RPC. All API keys in Supabase <code>app_config</code> table, fetched at runtime behind RLS — zero secrets in build artifact.</p>
         </div>
 
         <div class="tech-block">
           <div class="tech-block-title">// execution stack</div>
           <div class="tech-line"><span>Mobile:</span>   Flutter 3.x · Dart 3.10 · 20 screens · 16 service classes</div>
           <div class="tech-line"><span>Backend:</span>  Supabase (Auth · PostgreSQL · Edge Functions · RLS · Realtime)</div>
-          <div class="tech-line"><span>Admin:</span>    Next.js 16 · React 19 · Recharts · Server Actions</div>
+          <div class="tech-line"><span>Admin:</span>    Next.js 16 · React 19 · Recharts · Server Actions · 30s auto-refresh</div>
           <div class="tech-line"><span>AI:</span>       Google Gemini 2.5 Flash-Lite Vision · PlantNet API</div>
           <div class="tech-line"><span>CI/CD:</span>    GitLab CI (4-stage) · Fastlane → Play Store</div>
-          <div class="tech-line source-private" style="margin-top:.8rem;"><span>Source:</span>  🔒 Private Repository · <a href="mailto:surajsurve02022@gmail.com" style="color:var(--cyan);opacity:.7;">Request access for code review</a></div>
         </div>
       </article>
 
-      <!-- ── CASE STUDY 3: MessMaster Pro ── -->
-      <article class="case-study reveal" data-tags="fullstack">
+      <!-- ── CASE STUDY 4: MessMaster Pro ── -->
+      <article class="case-study holo-card reveal" data-tags="fullstack saas">
+        <div class="holo-border"></div>
         <div class="case-study-header">
           <h3 class="case-study-title">MessMaster Pro — Atomic Transactions Across 36 Database Tables</h3>
           <span class="case-study-status status-dev">● IN DEV</span>
@@ -179,27 +242,19 @@
         <div class="case-study-tags">
           <span class="case-study-tag">Full-Stack</span><span class="case-study-tag">SaaS</span><span class="case-study-tag">Backend</span>
         </div>
-        <p class="case-study-hook">An enterprise-grade, multi-tenant SaaS platform for hospitality operations. The engineering challenge: building a <strong>Recipe Engine</strong> that atomically deducts inventory on every POS order across a <strong>36-table relational schema</strong> — with zero data leakage between tenant organizations.</p>
+        <p class="case-study-hook">Enterprise-grade, multi-tenant SaaS for hospitality operations. The challenge: a <strong>Recipe Engine</strong> that atomically deducts inventory on every POS order across a <strong>36-table relational schema</strong> — with zero data leakage between tenant organizations.</p>
 
         <div class="metrics-row">
-          <div class="metric"><div class="metric-val">31</div><div class="metric-label">Pages</div></div>
-          <div class="metric"><div class="metric-val">21</div><div class="metric-label">API Modules</div></div>
-          <div class="metric"><div class="metric-val">36</div><div class="metric-label">DB Tables</div></div>
-          <div class="metric"><div class="metric-val">13</div><div class="metric-label">Migrations</div></div>
+          <div class="metric"><div class="metric-val" data-count="31">0</div><div class="metric-label">Pages</div></div>
+          <div class="metric"><div class="metric-val" data-count="21">0</div><div class="metric-label">API Modules</div></div>
+          <div class="metric"><div class="metric-val" data-count="36">0</div><div class="metric-label">DB Tables</div></div>
+          <div class="metric"><div class="metric-val" data-count="13">0</div><div class="metric-label">Migrations</div></div>
         </div>
 
         <div class="bottleneck">
-          <div class="bottleneck-label">⚠ Bottleneck 01 — Recipe Engine Atomic Deduction</div>
-          <h4 class="bottleneck-title">Every POS order must deduct ingredients without partial failures.</h4>
-          <p class="bottleneck-problem"><strong>The Problem:</strong> A single order can contain multiple dishes, each with multiple ingredients. If the inventory update fails mid-transaction, stock counts become permanently inconsistent.</p>
-          <p class="bottleneck-solution"><strong>The Engine:</strong> On every POS order — query <code>dish_ingredients</code>, compute <code>qty_per_portion × order_qty</code>, batch-update <code>mess_inventory</code>, insert to <code>inventory_txns</code> — all within a single atomic transaction with <code>BEGIN/COMMIT/ROLLBACK</code>.</p>
-        </div>
-
-        <div class="bottleneck">
-          <div class="bottleneck-label">⚠ Bottleneck 02 — Multi-Tenant Data Isolation</div>
-          <h4 class="bottleneck-title">21 API modules. Zero cross-organization data leakage.</h4>
-          <p class="bottleneck-problem"><strong>The Problem:</strong> In a multi-tenant SaaS, every single query across every single route must be scoped to the correct organization. One missed filter = data breach.</p>
-          <p class="bottleneck-solution"><strong>The Engine:</strong> JWT-scoped <code>org_id</code> filtering enforced at the middleware level across all 21 route modules. Supabase RLS policies as a second defense layer for customer-facing QR ordering endpoints.</p>
+          <div class="bottleneck-label radar-pulse">⚠ Bottleneck — Atomic Deduction + Multi-Tenant Isolation</div>
+          <h4 class="bottleneck-title">Every POS order must deduct ingredients without partial failures. Zero cross-org leakage.</h4>
+          <p class="bottleneck-solution"><strong>The Engine:</strong> Query <code>dish_ingredients</code> → compute <code>qty_per_portion × order_qty</code> → batch-update <code>mess_inventory</code> → insert to <code>inventory_txns</code> — all within <code>BEGIN/COMMIT/ROLLBACK</code>. JWT-scoped <code>org_id</code> filtering across all 21 route modules.</p>
         </div>
 
         <div class="tech-block">
@@ -208,43 +263,112 @@
           <div class="tech-line"><span>Backend:</span>  Node.js · Express · PostgreSQL · JWT · Pino · PDFKit</div>
           <div class="tech-line"><span>Realtime:</span> Supabase Realtime (KDS tickets · order state machine)</div>
           <div class="tech-line"><span>Security:</span> bcrypt (12 rounds) · RLS · express-rate-limit</div>
-          <div class="tech-line source-private" style="margin-top:.8rem;"><span>Source:</span>  🔒 Private Repository · <a href="mailto:surajsurve02022@gmail.com" style="color:var(--cyan);opacity:.7;">Request access for code review</a></div>
         </div>
       </article>
     </div>
 
-    <!-- Smaller project cards -->
+    <!-- ── TIER 2: MEDIUM PROJECT CARDS ── -->
+    <div class="medium-projects">
+      <div class="project-card-md holo-card reveal" data-tags="rl robotics ai">
+        <div class="holo-border"></div>
+        <h4 class="project-card-title"><a href="https://github.com/surajsurve4511/UAV-Strategic-Deconfliction-in-Shared-Airspace" target="_blank">Autonomous Drone — Deep RL Navigation</a></h4>
+        <p class="project-card-desc">Double DQN with N-step returns, HER, and curiosity-driven exploration. Attention-based sensor fusion (9 LiDAR + 5 cameras) over 10,000+ AirSim episodes. Curriculum learning across 11 flight skill levels.</p>
+        <div class="project-card-tags"><span>PyTorch</span><span>AirSim</span><span>CUDA</span><span>Double DQN</span><span>HER</span></div>
+      </div>
+
+      <div class="project-card-md holo-card reveal" data-tags="genai fullstack ai">
+        <div class="holo-border"></div>
+        <h4 class="project-card-title"><a href="https://gitlab.com/surajsurve4511/shrushti" target="_blank">AgriSmart — RAG-Powered Farm Advisory AI</a></h4>
+        <p class="project-card-desc">Gemini 2.5 Flash grounded in real-time farm telemetry and 1,000+ localized data points. Voice-first interface in 6 regional languages (Hindi, Marathi, Tamil, Telugu, Kannada, Bengali) for low-literacy farmers.</p>
+        <div class="project-card-tags"><span>RAG</span><span>Gemini</span><span>ChromaDB</span><span>React</span><span>6 Languages</span></div>
+      </div>
+
+      <div class="project-card-md holo-card reveal" data-tags="genai ai fullstack">
+        <div class="holo-border"></div>
+        <h4 class="project-card-title">AIVA — RAG Voice Assistant with Script Execution</h4>
+        <p class="project-card-desc">Docker-containerized RAG assistant using DeepSeek Coder + ChromaDB. Ingests 10+ file formats with OCR fallback. Generates and executes Python/Bash/PowerShell scripts with built-in security sandboxing.</p>
+        <div class="project-card-tags"><span>Ollama</span><span>ChromaDB</span><span>Docker</span><span>Flask</span><span>OCR</span></div>
+      </div>
+
+      <div class="project-card-md holo-card reveal" data-tags="robotics ai">
+        <div class="holo-border"></div>
+        <h4 class="project-card-title">InMoov ROS2 — 89-Joint Humanoid with MoveIt 2</h4>
+        <p class="project-card-desc">Complete open-source ROS2 workspace for InMoov humanoid. 89 joints, dual-arm synchronized planning, 6 conversational poses (wave, handshake, think, shrug), and 38 automated test cases across a 5-tier suite.</p>
+        <div class="project-card-tags"><span>ROS2</span><span>MoveIt 2</span><span>URDF/XACRO</span><span>Gazebo</span><span>38 Tests</span></div>
+      </div>
+
+      <div class="project-card-md holo-card reveal" data-tags="ai fullstack genai">
+        <div class="holo-border"></div>
+        <h4 class="project-card-title">EDITH — Iron Man JARVIS Voice Assistant</h4>
+        <p class="project-card-desc">Desktop voice assistant with an interactive holographic arc-reactor HUD rendered through Chromium. Dual-process architecture: UI + execution on one process, background hotword listener on another. System automation and Gemini API fallback.</p>
+        <div class="project-card-tags"><span>Python</span><span>Eel</span><span>Canvas HUD</span><span>Gemini</span><span>Multiprocessing</span></div>
+      </div>
+
+      <div class="project-card-md holo-card reveal" data-tags="mobile fullstack">
+        <div class="holo-border"></div>
+        <h4 class="project-card-title"><a href="https://github.com/surajsurve4511/Saheli-SIH" target="_blank">Saheli SIH — Women Safety Emergency System</a></h4>
+        <p class="project-card-desc">Smart India Hackathon women safety ecosystem. One-touch SOS with shake detection, Twilio automated telephony dispatch, and real-time WebSocket emergency console with live GPS tracking.</p>
+        <div class="project-card-tags"><span>Flutter</span><span>Firebase</span><span>Twilio</span><span>WebSockets</span><span>Google Maps</span></div>
+      </div>
+    </div>
+
+    <!-- ── TIER 3: SMALL PROJECT CARDS ── -->
     <div class="small-projects">
-      <div class="project-card reveal" data-tags="genai fullstack ai">
-        <h4 class="project-card-title"><a href="https://gitlab.com/surajsurve4511/shrushti" target="_blank" style="color:var(--text)">AgriSmart — RAG-Powered Farm Advisory</a></h4>
-        <p class="project-card-desc">Gemini 2.5 Flash grounded in real-time farm telemetry and 1,000+ localized data points. Voice-first interface in 6 regional languages for rural farmers.</p>
-        <div class="project-card-tags"><span class="project-card-tag">RAG</span><span class="project-card-tag">Gemini</span><span class="project-card-tag">ChromaDB</span><span class="project-card-tag">React</span></div>
+      <div class="project-card reveal" data-tags="genai ai saas">
+        <h4 class="project-card-title">Thinking Organism</h4>
+        <p class="project-card-desc">6-agent autonomous lead gen engine with evolutionary self-optimization. Biological nervous system architecture.</p>
+        <div class="project-card-tags"><span>Gemini</span><span>Supabase</span><span>Node.js</span></div>
       </div>
-      <div class="project-card reveal" data-tags="genai ai fullstack">
-        <h4 class="project-card-title">AIVA — RAG Voice Assistant</h4>
-        <p class="project-card-desc">Docker-containerized RAG assistant using DeepSeek Coder + ChromaDB. 10+ file formats, OCR ingestion, automated script execution with security sandboxing.</p>
-        <div class="project-card-tags"><span class="project-card-tag">Ollama</span><span class="project-card-tag">ChromaDB</span><span class="project-card-tag">Docker</span><span class="project-card-tag">Flask</span></div>
+      <div class="project-card reveal" data-tags="genai ai saas">
+        <h4 class="project-card-title"><a href="https://github.com/surajsurve4511/Ultimate-Instagram-AI-Automation" target="_blank">InstaAutomate SaaS</a></h4>
+        <p class="project-card-desc">AI Instagram marketing — Gemini trend discovery, content generation, Meta Graph API auto-publishing.</p>
+        <div class="project-card-tags"><span>FastAPI</span><span>Gemini</span><span>Meta API</span></div>
       </div>
-      <div class="project-card reveal" data-tags="rl robotics ai">
-        <h4 class="project-card-title"><a href="https://github.com/surajsurve4511/UAV-Strategic-Deconfliction-in-Shared-Airspace" target="_blank" style="color:var(--text)">Autonomous Drone — Deep RL Navigation</a></h4>
-        <p class="project-card-desc">Double DQN with N-step returns, HER, and curiosity-driven exploration. Attention-based sensor fusion (9 LiDAR + 5 cameras) over 10,000+ AirSim episodes.</p>
-        <div class="project-card-tags"><span class="project-card-tag">PyTorch</span><span class="project-card-tag">AirSim</span><span class="project-card-tag">CUDA</span><span class="project-card-tag">DQN</span></div>
+      <div class="project-card reveal" data-tags="fullstack">
+        <h4 class="project-card-title">PrintLab Pune</h4>
+        <p class="project-card-desc">3D printing marketplace with volumetric pricing algorithm, maker management, and Razorpay billing.</p>
+        <div class="project-card-tags"><span>React 19</span><span>Razorpay</span><span>Playwright</span></div>
+      </div>
+      <div class="project-card reveal" data-tags="genai ai">
+        <h4 class="project-card-title">Statistical Inference Copilot</h4>
+        <p class="project-card-desc">Multi-agent AI stats copilot — 40+ metrics, 5 normality tests, auto-generated PPTX reports.</p>
+        <div class="project-card-tags"><span>FastAPI</span><span>R Plumber</span><span>Ollama</span></div>
+      </div>
+      <div class="project-card reveal" data-tags="fullstack genai">
+        <h4 class="project-card-title"><a href="https://gitlab.com/surajsurve4511/gateprep" target="_blank">GATE Nexus</a></h4>
+        <p class="project-card-desc">AI exam prep — Gemini tutor, 16 years of PYQ analytics, YouTube tracking, one-click desktop deploy.</p>
+        <div class="project-card-tags"><span>React</span><span>Node.js</span><span>MySQL</span><span>Gemini</span></div>
       </div>
       <div class="project-card reveal" data-tags="genai ai fullstack">
         <h4 class="project-card-title">AI Data Scientist Copilot</h4>
-        <p class="project-card-desc">Natural language → executable statistical analysis. 90%+ intent accuracy across 7 analysis modules including OLS regression, IQR outlier detection, and time-series.</p>
-        <div class="project-card-tags"><span class="project-card-tag">Gemini</span><span class="project-card-tag">Streamlit</span><span class="project-card-tag">Pandas</span><span class="project-card-tag">SciPy</span></div>
+        <p class="project-card-desc">Natural language → executable statistical analysis. 90%+ intent accuracy across 7 analysis modules.</p>
+        <div class="project-card-tags"><span>Gemini</span><span>Streamlit</span><span>Pandas</span><span>SciPy</span></div>
       </div>
-      <div class="project-card reveal" data-tags="fullstack genai">
-        <h4 class="project-card-title"><a href="https://gitlab.com/surajsurve4511/gateprep" target="_blank" style="color:var(--text)">GATE Nexus — AI Exam Prep Platform</a></h4>
-        <p class="project-card-desc">Full-stack GATE prep with Gemini AI tutor, 16 years of PYQ analytics across 50+ topics, YouTube completion tracking, and one-click desktop deployment.</p>
-        <div class="project-card-tags"><span class="project-card-tag">React</span><span class="project-card-tag">Node.js</span><span class="project-card-tag">MySQL</span><span class="project-card-tag">Gemini</span></div>
+      <div class="project-card reveal" data-tags="fullstack saas">
+        <h4 class="project-card-title">LifeSync</h4>
+        <p class="project-card-desc">AI-powered shared OS for couples — finances, chores, health, calendar sync with Supabase RLS.</p>
+        <div class="project-card-tags"><span>React</span><span>NestJS</span><span>Prisma</span><span>Supabase</span></div>
+      </div>
+      <div class="project-card reveal" data-tags="ai fullstack">
+        <h4 class="project-card-title">UnifiedSec Framework</h4>
+        <p class="project-card-desc">Enterprise modular cybersecurity framework — 9 packages from network recon to SAST scanning.</p>
+        <div class="project-card-tags"><span>Python</span><span>Scapy</span><span>Pwntools</span><span>FastAPI</span></div>
+      </div>
+      <div class="project-card reveal" data-tags="robotics ai">
+        <h4 class="project-card-title">TwinPhi Unity Studio</h4>
+        <p class="project-card-desc">Unity 6 simulation studio — 70-link MANAS rig, 16 gestures, 30Hz motion capture, ROS2 bridge.</p>
+        <div class="project-card-tags"><span>Unity 6</span><span>C#</span><span>ROS2 UDP</span></div>
+      </div>
+      <div class="project-card reveal" data-tags="robotics ai genai">
+        <h4 class="project-card-title">InMoov LLM Control</h4>
+        <p class="project-card-desc">Offline cognitive control — Qwen GGUF LLM parses NL commands into MoveIt trajectories with S-curve smoothing.</p>
+        <div class="project-card-tags"><span>ROS2</span><span>llama.cpp</span><span>MoveIt 2</span><span>Docker</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ THE ENGINE — SKILLS + EXPERIENCE ═══ -->
+<!-- ═══ THE ENGINE — SKILLS ═══ -->
 <section class="section" id="engine" style="background:var(--bg2);">
   <div class="container">
     <div class="reveal"><span class="section-label">The Engine</span></div>
@@ -252,27 +376,30 @@
     <p class="section-sub reveal">No progress bars. No self-reported percentages. The systems above prove the stack below.</p>
 
     <div class="skill-categories">
-      <div class="skill-card reveal">
+      <div class="skill-card holo-card reveal">
+        <div class="holo-border"></div>
         <div class="skill-card-icon">🦾</div>
         <div class="skill-card-title">Robotics &amp; Embedded</div>
         <div class="skill-tags">
-          <span class="skill-tag">ROS2</span><span class="skill-tag">MoveIt</span><span class="skill-tag">Gazebo</span>
-          <span class="skill-tag">Digital Twin</span><span class="skill-tag">6-DOF Arm Control</span>
-          <span class="skill-tag">Raspberry Pi</span><span class="skill-tag">Arduino</span><span class="skill-tag">ESP32</span>
-          <span class="skill-tag">SLAM</span><span class="skill-tag">Edge AI</span>
+          <span class="skill-tag">ROS2</span><span class="skill-tag">MoveIt 2</span><span class="skill-tag">Gazebo</span>
+          <span class="skill-tag">Isaac Sim</span><span class="skill-tag">Digital Twin</span><span class="skill-tag">6-DOF Arms</span>
+          <span class="skill-tag">PX4 Autopilot</span><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">ESP32</span>
+          <span class="skill-tag">SLAM</span><span class="skill-tag">Micro-ROS</span><span class="skill-tag">URDF/XACRO</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card holo-card reveal">
+        <div class="holo-border"></div>
         <div class="skill-card-icon">👁️</div>
         <div class="skill-card-title">Deep Learning &amp; Vision</div>
         <div class="skill-tags">
           <span class="skill-tag">PyTorch</span><span class="skill-tag">TensorFlow</span>
           <span class="skill-tag">YOLO v8/v11/v12/World</span><span class="skill-tag">OpenCV</span>
-          <span class="skill-tag">LSTM</span><span class="skill-tag">Attention</span>
-          <span class="skill-tag">ONNX</span><span class="skill-tag">CUDA</span>
+          <span class="skill-tag">MediaPipe</span><span class="skill-tag">LSTM</span><span class="skill-tag">Attention</span>
+          <span class="skill-tag">ONNX</span><span class="skill-tag">CUDA</span><span class="skill-tag">SVD DLT</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card holo-card reveal">
+        <div class="holo-border"></div>
         <div class="skill-card-icon">🎮</div>
         <div class="skill-card-title">Reinforcement Learning</div>
         <div class="skill-tags">
@@ -281,127 +408,149 @@
           <span class="skill-tag">Curiosity-Driven</span><span class="skill-tag">AirSim</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card holo-card reveal">
+        <div class="holo-border"></div>
         <div class="skill-card-icon">🧠</div>
         <div class="skill-card-title">Generative AI &amp; LLMs</div>
         <div class="skill-tags">
           <span class="skill-tag">RAG Pipelines</span><span class="skill-tag">LangChain</span>
           <span class="skill-tag">Gemini 2.5</span><span class="skill-tag">Ollama</span>
-          <span class="skill-tag">DeepSeek</span><span class="skill-tag">ChromaDB</span>
-          <span class="skill-tag">Pinecone</span><span class="skill-tag">Prompt Engineering</span>
+          <span class="skill-tag">Qwen 4B</span><span class="skill-tag">DeepSeek</span>
+          <span class="skill-tag">ChromaDB</span><span class="skill-tag">Pinecone</span><span class="skill-tag">Prompt Engineering</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card holo-card reveal">
+        <div class="holo-border"></div>
         <div class="skill-card-icon">📱</div>
         <div class="skill-card-title">Mobile &amp; Full-Stack</div>
         <div class="skill-tags">
           <span class="skill-tag">Flutter / Dart</span><span class="skill-tag">React 19</span>
           <span class="skill-tag">Next.js 16</span><span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Node.js</span><span class="skill-tag">Express</span>
-          <span class="skill-tag">FastAPI</span><span class="skill-tag">Flask</span>
+          <span class="skill-tag">Three.js / R3F</span><span class="skill-tag">Node.js</span>
+          <span class="skill-tag">Express</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Flask</span>
         </div>
       </div>
-      <div class="skill-card reveal">
+      <div class="skill-card holo-card reveal">
+        <div class="holo-border"></div>
         <div class="skill-card-icon">🗄️</div>
         <div class="skill-card-title">Databases &amp; Cloud</div>
         <div class="skill-tags">
           <span class="skill-tag">PostgreSQL</span><span class="skill-tag">Supabase</span>
           <span class="skill-tag">MongoDB</span><span class="skill-tag">MySQL</span>
           <span class="skill-tag">AWS IoT Core</span><span class="skill-tag">Docker</span>
-          <span class="skill-tag">GitLab CI/CD</span><span class="skill-tag">Fastlane</span>
+          <span class="skill-tag">GitLab CI/CD</span><span class="skill-tag">Fastlane</span><span class="skill-tag">Vercel</span>
         </div>
       </div>
     </div>
 
-    <!-- Experience Timeline -->
-    <div style="margin-top:5rem;">
-      <div class="reveal"><span class="section-label">Deployment Log</span></div>
-      <h2 class="section-title reveal" style="margin-bottom:3rem;">Where the systems were built<span class="glow-text">.</span></h2>
+    <!-- Languages -->
+    <div class="languages-section reveal" style="margin-top:3rem;">
+      <h3 style="font-family:var(--mono);font-size:1rem;color:var(--muted);margin-bottom:1.5rem;">// languages</h3>
+      <div class="lang-bars">
+        <div class="lang-bar"><span class="lang-name">Python</span><div class="lang-track"><div class="lang-fill" style="--w:95%"></div></div><span class="lang-level">Advanced</span></div>
+        <div class="lang-bar"><span class="lang-name">Dart/Flutter</span><div class="lang-track"><div class="lang-fill" style="--w:90%"></div></div><span class="lang-level">Advanced</span></div>
+        <div class="lang-bar"><span class="lang-name">TypeScript</span><div class="lang-track"><div class="lang-fill" style="--w:85%"></div></div><span class="lang-level">Proficient</span></div>
+        <div class="lang-bar"><span class="lang-name">C / C++</span><div class="lang-track"><div class="lang-fill" style="--w:80%"></div></div><span class="lang-level">Proficient</span></div>
+        <div class="lang-bar"><span class="lang-name">C# (Unity)</span><div class="lang-track"><div class="lang-fill" style="--w:75%"></div></div><span class="lang-level">Proficient</span></div>
+        <div class="lang-bar"><span class="lang-name">SQL</span><div class="lang-track"><div class="lang-fill" style="--w:80%"></div></div><span class="lang-level">Proficient</span></div>
+        <div class="lang-bar"><span class="lang-name">R</span><div class="lang-track"><div class="lang-fill" style="--w:60%"></div></div><span class="lang-level">Intermediate</span></div>
+        <div class="lang-bar"><span class="lang-name">Bash</span><div class="lang-track"><div class="lang-fill" style="--w:65%"></div></div><span class="lang-level">Intermediate</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="timeline">
-        <div class="timeline-item current reveal">
-          <span class="timeline-badge badge-current">ACTIVE</span>
-          <div class="timeline-role">AI Robotics Engineer</div>
-          <div class="timeline-company">M CAD Solutions — Pune</div>
-          <div class="timeline-period">FEB 2026 → PRESENT</div>
-          <p class="timeline-desc">Designing a production-grade 6-DOF AI robotic arm with ROS2, Digital Twin, natural language Brain Node (Ollama + YOLO World), kinesthetic learning, predictive maintenance, and AWS IoT cloud connectivity.</p>
-          <div class="timeline-tech">
-            <span class="skill-tag">ROS2</span><span class="skill-tag">MoveIt</span><span class="skill-tag">YOLO World</span><span class="skill-tag">Ollama</span><span class="skill-tag">AWS IoT</span>
-          </div>
+<!-- ═══ DEPLOYMENT LOG — EXPERIENCE ═══ -->
+<section class="section" id="deployments">
+  <div class="container">
+    <div class="reveal"><span class="section-label">Deployment Log</span></div>
+    <h2 class="section-title reveal">Where the systems were built<span class="glow-text">.</span></h2>
+    <p class="section-sub reveal">Real internships, real products, real impact — while still in second year.</p>
+
+    <div class="timeline">
+      <div class="timeline-item current reveal">
+        <span class="timeline-badge badge-current">ACTIVE</span>
+        <div class="timeline-role">AI Robotics Engineer</div>
+        <div class="timeline-company">M CAD Solutions — Pune</div>
+        <div class="timeline-period">FEB 2026 → PRESENT</div>
+        <p class="timeline-desc">Architecting the MANAS humanoid robot (ROS2 + Isaac Sim + Qwen 4B LLM) and production-grade 6-DOF robotic arms with NL Brain Nodes, dual-camera 3D calibration, and AWS IoT telemetry. Honored with Mentor Recognition Award (R.I.D.E. 2026, MIT-WPU). Invited as Trainer for ROBONOVA 2026 (Persistent Systems).</p>
+        <div class="timeline-tech">
+          <span class="skill-tag">ROS2</span><span class="skill-tag">Isaac Sim</span><span class="skill-tag">MoveIt</span><span class="skill-tag">Qwen 4B</span><span class="skill-tag">YOLO World</span><span class="skill-tag">AWS IoT</span>
         </div>
+      </div>
 
-        <div class="timeline-item current reveal">
-          <span class="timeline-badge badge-current">ACTIVE</span>
-          <div class="timeline-role">AI Engineer</div>
-          <div class="timeline-company">FMCIII Pune — GrowBox</div>
-          <div class="timeline-period">DEC 2025 → PRESENT</div>
-          <p class="timeline-desc">Architected FastAPI + Supabase microservices for a 498+ plant species database. Built AI inference pipelines for plant identification and disease diagnosis. Deployed on Render/AWS with CI/CD.</p>
-          <div class="timeline-tech">
-            <span class="skill-tag">FastAPI</span><span class="skill-tag">Supabase</span><span class="skill-tag">RLS</span><span class="skill-tag">REST APIs</span>
-          </div>
+      <div class="timeline-item current reveal">
+        <span class="timeline-badge badge-current">ACTIVE</span>
+        <div class="timeline-role">AI Engineer</div>
+        <div class="timeline-company">FMCIII Pune — GrowBox</div>
+        <div class="timeline-period">DEC 2025 → PRESENT</div>
+        <p class="timeline-desc">Architected FastAPI + Supabase microservices for a 498+ plant species database. Built AI inference pipelines for plant identification and disease diagnosis. Deployed on Render/AWS with CI/CD.</p>
+        <div class="timeline-tech">
+          <span class="skill-tag">FastAPI</span><span class="skill-tag">Supabase</span><span class="skill-tag">RLS</span><span class="skill-tag">REST APIs</span><span class="skill-tag">Firebase</span>
         </div>
+      </div>
 
-        <div class="timeline-item reveal">
-          <span class="timeline-badge badge-done">COMPLETED</span>
-          <div class="timeline-role">AI Intern</div>
-          <div class="timeline-company">Infosys Springboard</div>
-          <div class="timeline-period">DEC 2025 → APR 2026</div>
-          <p class="timeline-desc">Built an LSTM-based Smart Energy Forecasting system achieving 95% prediction accuracy on 6 months of IoT sensor data. Deployed Flask dashboard with real-time energy-saving recommendations.</p>
-          <div class="timeline-tech">
-            <span class="skill-tag">LSTM</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Flask</span><span class="skill-tag">IoT</span>
-          </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-badge badge-done">COMPLETED</span>
+        <div class="timeline-role">AI Intern</div>
+        <div class="timeline-company">Infosys Springboard</div>
+        <div class="timeline-period">DEC 2025 → APR 2026</div>
+        <p class="timeline-desc">Built LSTM-based Smart Energy Forecasting system achieving 95% prediction accuracy on 6 months of IoT sensor data. Deployed Flask dashboard with real-time energy-saving recommendations.</p>
+        <div class="timeline-tech">
+          <span class="skill-tag">LSTM</span><span class="skill-tag">TensorFlow</span><span class="skill-tag">Flask</span><span class="skill-tag">IoT</span>
         </div>
+      </div>
 
-        <div class="timeline-item reveal">
-          <span class="timeline-badge badge-done">COMPLETED</span>
-          <div class="timeline-role">AI Engineer</div>
-          <div class="timeline-company">Robocon Team Rudra — MMCOE</div>
-          <div class="timeline-period">NOV 2025 → JAN 2026</div>
-          <p class="timeline-desc">Contributed YOLO-based object detection and AI decision-making modules. Built real-time perception pipelines for autonomous object interaction under competition time constraints.</p>
-          <div class="timeline-tech">
-            <span class="skill-tag">YOLO</span><span class="skill-tag">OpenCV</span><span class="skill-tag">Python</span>
-          </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-badge badge-done">COMPLETED</span>
+        <div class="timeline-role">AI Engineer</div>
+        <div class="timeline-company">Robocon Team Rudra — MMCOE</div>
+        <div class="timeline-period">NOV 2025 → JAN 2026</div>
+        <p class="timeline-desc">Contributed YOLO-based object detection and AI decision-making modules. Built real-time perception pipelines for autonomous object interaction under competition constraints.</p>
+        <div class="timeline-tech">
+          <span class="skill-tag">YOLO</span><span class="skill-tag">OpenCV</span><span class="skill-tag">Python</span>
         </div>
+      </div>
 
-        <div class="timeline-item reveal">
-          <span class="timeline-badge badge-done">COMPLETED</span>
-          <div class="timeline-role">Vice President</div>
-          <div class="timeline-company">NEURA MMCOE — AI/ML Club</div>
-          <div class="timeline-period">JUL 2024 → JUL 2025</div>
-          <p class="timeline-desc">Led MMCOE's AI/ML student club — 100+ members. Organized workshops, hackathons, and speaker events on deep learning, computer vision, and robotics.</p>
-          <div class="timeline-tech">
-            <span class="skill-tag">Leadership</span><span class="skill-tag">Community</span><span class="skill-tag">AI Education</span>
-          </div>
+      <div class="timeline-item reveal">
+        <span class="timeline-badge badge-done">COMPLETED</span>
+        <div class="timeline-role">Vice President</div>
+        <div class="timeline-company">NEURA MMCOE — AI/ML Club</div>
+        <div class="timeline-period">JUL 2024 → JUL 2025</div>
+        <p class="timeline-desc">Led MMCOE's AI/ML student club — 100+ members. Organized workshops, hackathons, and speaker events on deep learning, computer vision, and robotics.</p>
+        <div class="timeline-tech">
+          <span class="skill-tag">Leadership</span><span class="skill-tag">Community</span><span class="skill-tag">AI Education</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CERTIFICATIONS ═══ -->
-<section class="section" id="certs">
+<!-- ═══ CREDENTIALS — CERTIFICATIONS + EDUCATION ═══ -->
+<section class="section" id="credentials" style="background:var(--bg2);">
   <div class="container">
     <div class="reveal"><span class="section-label">Credentials</span></div>
     <h2 class="section-title reveal">Validated, not self-reported<span class="glow-text">.</span></h2>
 
-    <div class="cert-highlight reveal">
+    <div class="cert-highlight holo-card reveal">
+      <div class="holo-border"></div>
       <div class="cert-highlight-icon">🏆</div>
       <div>
         <div class="cert-highlight-title">GATE DA — Qualified</div>
-        <div class="cert-highlight-desc">Graduate Aptitude Test in Engineering — Data Science &amp; AI. National-level competitive examination conducted by IITs. Demonstrates rigorous foundation across ML, statistics, linear algebra, probability, and CS fundamentals.</div>
+        <div class="cert-highlight-desc">Graduate Aptitude Test in Engineering — Data Science &amp; AI. National-level exam conducted by IITs. Demonstrates rigorous foundation across ML, statistics, linear algebra, probability, and CS fundamentals.</div>
       </div>
     </div>
 
     <div class="certs-grid">
-      <div class="cert-card reveal"><div class="cert-card-name">ML with Python: Linear Models to Deep Learning</div><div class="cert-card-inst">Massachusetts Institute of Technology (MIT)</div><div class="cert-card-badge">⭐ Prestigious</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">CS50's Intro to Programming with Python</div><div class="cert-card-inst">Harvard University</div><div class="cert-card-badge">⭐ Prestigious</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">Python with Advanced AI</div><div class="cert-card-inst">GUVI / IIT Madras · Skill India Digital</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">Deep Learning for Developers</div><div class="cert-card-inst">Infosys Springboard</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">Generative Models for Developers</div><div class="cert-card-inst">Infosys Springboard</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">OpenAI GPT Certification</div><div class="cert-card-inst">Infosys Springboard</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">Computer Vision 101</div><div class="cert-card-inst">Infosys Springboard</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">GDSC ML Bootcamp</div><div class="cert-card-inst">GDSC MMCOE</div></div>
-      <div class="cert-card reveal"><div class="cert-card-name">Agile Scrum in Practice</div><div class="cert-card-inst">Professional Certification</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">ML with Python: Linear Models to Deep Learning</div><div class="cert-card-inst">Massachusetts Institute of Technology (MIT)</div><div class="cert-card-badge">⭐ Prestigious</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">CS50's Intro to Programming with Python</div><div class="cert-card-inst">Harvard University</div><div class="cert-card-badge">⭐ Prestigious</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">Python with Advanced AI</div><div class="cert-card-inst">GUVI / IIT Madras · Skill India Digital</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">Deep Learning for Developers</div><div class="cert-card-inst">Infosys Springboard</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">Generative Models for Developers</div><div class="cert-card-inst">Infosys Springboard</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">OpenAI GPT Certification</div><div class="cert-card-inst">Infosys Springboard</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">Computer Vision 101</div><div class="cert-card-inst">Infosys Springboard</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">GDSC ML Bootcamp</div><div class="cert-card-inst">GDSC MMCOE</div></div>
+      <div class="cert-card holo-card reveal"><div class="holo-border"></div><div class="cert-card-name">Agile Scrum in Practice</div><div class="cert-card-inst">Professional Certification</div></div>
     </div>
 
     <!-- Education -->
@@ -428,15 +577,26 @@
   </div>
 </section>
 
-<!-- ═══ TRANSMISSION — CONTACT CTA ═══ -->
+<!-- ═══ TRANSMISSION — CONTACT ═══ -->
 <section class="section contact-section" id="transmission">
   <div class="container">
     <div class="reveal"><span class="section-label" style="justify-content:center;">Transmission</span></div>
     <h2 class="contact-cta reveal">Currently exploring complex engineering challenges<span class="glow-text">.</span><br>Initialize a conversation.</h2>
-    <div class="reveal">
-      <a href="mailto:surajsurve02022@gmail.com" class="contact-btn">surajsurve02022@gmail.com →</a>
-    </div>
+
+    <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/xyzgkqjw" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Name" required class="form-input">
+        <input type="email" name="email" placeholder="Email" required class="form-input">
+      </div>
+      <input type="text" name="subject" placeholder="Subject" required class="form-input">
+      <textarea name="message" placeholder="Your message..." required class="form-input form-textarea" rows="5"></textarea>
+      <button type="submit" class="btn-primary form-submit">Send Transmission →</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+
     <div class="contact-alt reveal">
+      <a href="mailto:surajsurve02022@gmail.com">surajsurve02022@gmail.com</a>
+      &nbsp;·&nbsp;
       <a href="https://www.linkedin.com/in/suraj-surve-327207235" target="_blank">LinkedIn</a>
       &nbsp;·&nbsp;
       <a href="https://github.com/surajsurve4511" target="_blank">GitHub</a>
@@ -455,12 +615,18 @@
       <a href="#hero">Top</a>
       <a href="#systems">Systems</a>
       <a href="#engine">Engine</a>
-      <a href="#certs">Credentials</a>
+      <a href="#deployments">Deployments</a>
+      <a href="#credentials">Credentials</a>
       <a href="#transmission">Transmission</a>
     </div>
     <p class="footer-copy">Designed &amp; Built by Suraj Surve · © 2026</p>
   </div>
 </footer>
+
+<!-- ═══ BACK TO TOP ═══ -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 
 <script src="js/main.js"></script>
 </body>
