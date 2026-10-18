@@ -95,6 +95,7 @@ python -m http.server 8000
 
 ```
 Portfolio/
+├── AGENTS.md                        # Antigravity engineering rules & verification governance
 ├── Suraj_Surve_Portfolio_Content.md # Raw architectural content and biography text
 ├── assets/                          # Project diagrams, profile photos, and icons
 ├── css/
@@ -103,6 +104,18 @@ Portfolio/
 └── js/
     └── main.js                      # Counter animations, typewriter, and menu logic
 ```
+
+---
+
+## 🛡️ Antigravity & Verified Engineering Stack
+
+This project adopts rigorous, verifiable engineering practices for autonomous AI coding agents:
+
+- **Architecture & Contracts**: [AGENTS.md](AGENTS.md) governance rules, Graphify knowledge graphs, OpenAPI/Spectral contract enforcement, and PlantUML/Mermaid architecture diagrams.
+- **Testing & Quality**: Native unit test suites, Testcontainers for real integration testing, and SonarQube static code quality inspection.
+- **Security & DevSecOps**: Semgrep SAST pattern scanning, Trivy SCA/container scanning, Gitleaks secret detection, and OWASP ZAP runtime penetration testing.
+- **Runtime Observability**: OpenTelemetry distributed traces and Jaeger telemetry.
+- **Repeatable Builds**: Containerized Dagger CI pipeline runs identical checks locally and in CI/CD.
 
 ---
 

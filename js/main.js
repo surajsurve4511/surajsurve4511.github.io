@@ -15,9 +15,10 @@ document.addEventListener('DOMContentLoaded', () => {
     { text: '[VIS] YOLO World detection pipeline — ACTIVE', delay: 950, cls: 'success' },
     { text: '[IOT] AWS IoT Core telemetry — CONNECTED', delay: 1100, cls: 'success' },
     { text: '[SIM] Digital Twin synchronized', delay: 1250, cls: 'success' },
-    { text: '', delay: 1400 },
-    { text: '> SURAJ SURVE // AI & ROBOTICS ARCHITECT', delay: 1500, cls: 'highlight' },
-    { text: '> SYSTEM ONLINE', delay: 1700, cls: 'success' },
+    { text: '[SEC] DevSecOps & Architecture Verification — ENFORCED', delay: 1400, cls: 'success' },
+    { text: '', delay: 1500 },
+    { text: '> SURAJ SURVE // AI & ROBOTICS ARCHITECT', delay: 1600, cls: 'highlight' },
+    { text: '> SYSTEM ONLINE', delay: 1800, cls: 'success' },
   ];
 
   bootSequence.forEach(({ text, delay, cls }) => {
