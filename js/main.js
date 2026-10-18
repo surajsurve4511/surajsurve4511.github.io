@@ -154,14 +154,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ─── TYPEWRITER ───
   const roles = [
-    'AI & Robotics Engineer.',
-    'Building MANAS Humanoid.',
+    'GATE DA Qualified Engineer.',
+    'AI & Robotics Architect.',
+    'Building MANAS Humanoid (70 Links).',
     'Machine Learning Engineer.',
     'Full-Stack Developer.',
     'ROS2 & Digital Twin Developer.',
-    'Generative AI Builder.',
-    'Shipping to 1K+ users.',
-    'Deep RL Researcher.',
+    'Generative AI & LLM Builder.',
+    'Shipping to 1K+ Live Users.',
+    'Deep RL & Autonomous Systems.',
   ];
   const tw = document.getElementById('typewriter');
   let roleIdx = 0, charIdx = 0, deleting = false;
